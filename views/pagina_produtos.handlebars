@@ -1,0 +1,36 @@
+
+    <h1>Produtos</h1>
+	<div class="bodyContent">
+
+ 
+    <a href="/pagina_cadastrar">Cadastrar Produto</a>
+    <div class="productsContent">
+
+        {{#each post}}
+            {{#dataValues}}
+
+            <div class="row">
+                <div class="col">
+                    <img class="prodImg" src="{{this.URLimg}}" alt="">
+                </div>
+                <div class="col">
+                    {{this.nome}}
+                </div>
+                <div class="col">
+                    R$
+                    {{this.preco}}
+                </div>
+                <div class="col">
+                    Quantidade:
+                    {{this.qtd}}
+                </div>
+                <div class="col">
+                            <button type="button" class="btn"><a href="/atualizar/{{this.id}}" style="color:inherit">Editar</a></button>
+                            <button type="button" class="btn"><a href="/deletar/{{this.id}}" style="color:inherit">Excluir</a></button>
+                        </div>
+                    </div>
+                    {{/dataValues}}
+                {{/each}}
+                </div>
+</div>
+				
